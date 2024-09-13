@@ -29,29 +29,37 @@ a {
     display: flex;
     text-align: center;
 }
+.main-banner {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
 .recommended-menu h3 {
     font-weight: 900;
     font-size: 3.125rem;
     padding: 1.875rem;
     color: #600d23;
 }
-.main-banner {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
 .hidden {
-    display: none;
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 .delivery-services .button {
-    width: 11.6875rem;
+    width: 70%;
     height: 5rem;
     background-color: #fff;
     border-radius: 3.125rem;
     font-size: 1.4375rem;
     font-weight: 700;
     border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .delivery-services .button:hover {
     background: #600d23;
@@ -62,9 +70,6 @@ a {
 }
 .delivery-services .button a {
     color: #000;
-    display: block;
-    padding: 1.65625rem 0 3.96875rem;
-    text-align: center;
 }
 
 .gnb li {
@@ -99,31 +104,47 @@ a {
 }
 .menu-carousel {
     display: flex;
+    gap: 2rem;
     text-align: center;
     background-color: #fae6ea;
     justify-content: space-between;
 }
-.menu-carousel img {
-    width: 18.75rem;
-    height: 18.75rem;
-    padding: 0.625rem;
-    margin: 0 auto;
+
+.menu-carousel .menu-item {
+    /* border: 1px solid #000; */
+    /* width: 26.1rem; */
+    /* min-height: 35rem; */
+    width: 34.8%;
+    flex: 1 1 30%;
+    border: 1px solid #000;
+    aspect-ratio: 1/1.408;
+}
+
+.menu-carousel .menu-item figure {
+    width: 100%;
+    aspect-ratio: 1/1.01;
+}
+
+.menu-carousel .menu-item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .menu-carousel dt {
     padding: 0.125rem;
     font-weight: 800;
+    font-size: 1.5rem;
 }
 .menu-carousel dd {
     padding: 0.625rem;
     font-weight: 500;
     color: #666;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    display: block;
+    /* border: 1px solid #000; */
+    font-size: 1rem;
 }
-.menu-carousel dl {
-    padding: 0.625rem;
-    text-align: center;
-    margin: 0 auto;
-}
+
 .recommended-menu {
     padding: 8.9375rem 7.375rem;
 }
@@ -144,7 +165,12 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-
+.delivery-options-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .delivery-options {
     display: flex;
     flex-wrap: wrap;
@@ -248,27 +274,24 @@ a {
 .pagination a.active {
     color: #000000;
 }
-@media (max-width: 480px) {
-    .inner {
-        width: 100%;
-        padding: 0 1rem;
-    }
-    .main-banner img {
-        width: 100%;
-        height: auto;
-    }
 
-    .delivery-services .button {
-        width: 100%;
-        height: 4rem;
+@media (min-width: 480px) and (max-width: 767px) {
+    .menu-carousel dd {
+        padding: 0.625rem;
+        font-weight: 500;
+        color: #666;
+        /* font-size: 1.25rem; */
+        display: block;
+        border: 1px solid #000;
+        font-size: 1rem;
+    }
+    .menu-carousel dt {
         font-size: 1rem;
     }
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1100px) {
     .inner {
         width: 100%;
-        height: 100%;
         margin: 0 auto;
     }
     .inner h3 {
@@ -277,9 +300,6 @@ a {
     }
     .inner dl dt {
         font-size: 0.9rem;
-    }
-    .inner dl dt dd {
-        font-size: 5rem;
     }
 
     .main-banner img {
@@ -307,12 +327,22 @@ a {
         padding: 1rem;
         font-size: 1.2rem;
     }
-    .menu-carousel img {
-        width: 12rem;
-        height: 12rem;
+
+    .recommended-menu {
+        width: 100%;
     }
-    .menu-carousel {
-        width: 30px;
+    .menu-carousel dd {
+        /* padding: 0.625rem; */
+        font-weight: 500;
+        color: #666;
+        /* font-size: 1.25rem; */
+        display: block;
+        /* border: 1px solid #000; */
+        font-size: 0.7rem;
+    }
+    .menu-carousel dt {
+        font-size: 1rem;
+        /* border: 1px solid #000; */
     }
 }
 @media (min-width: 1024px) and (max-width: 1900px) {
@@ -320,20 +350,17 @@ a {
         width: 100%;
         padding: 0 1rem;
     }
-    body {
-        font-size: 1.4rem;
+    .menu-carousel dd {
+        /* padding: 0.625rem; */
+        font-weight: 500;
+        color: #666;
+        /* font-size: 1.25rem; */
+        display: block;
+        /* border: 1px solid #000; */
+        font-size: 0.7rem;
     }
-}
-@media (min-width: 480px) and (max-width: 1024px) {
-    .inner {
-        width: 100%;
-        padding: 0 1rem;
-    }
-    .main-banner img {
-        width: 100%;
-        height: auto;
-    }
-    .menu-carousel {
-        text-align: center;
+    .menu-carousel dt {
+        font-size: 1rem;
+        /* border: 1px solid #000; */
     }
 }
