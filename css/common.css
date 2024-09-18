@@ -155,7 +155,7 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-.delivery-services h3 {
+.delivery-services  h3 {
     font-weight: 900;
     font-size: 3.125rem;
     padding: 1.875rem;
@@ -176,7 +176,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     padding: 4.34375rem;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .delivery-options li {
@@ -185,7 +185,7 @@ a {
     margin-bottom: 1.25rem;
     padding: 4.40625rem 0;
     right: 8.25rem;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .delivery-options img {
@@ -277,43 +277,190 @@ a {
     color: #000000;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-    .inner{
+@media (min-width: 420px) and (max-width: 520px) {
+    .inner {
         width: 100%;
         margin: 0 auto;
+        padding: 0 1rem;
     }
-    .menu-carousel dd {
-        padding: 0.625rem;
-        font-weight: 500;
-        color: #666;
-        /* font-size: 1.25rem; */
-        display: block;
-        border: 1px solid #000;
-        font-size: 0.5rem;
+
+    /* 헤더 */
+    .logo {
+        text-align: center;
+        padding: 1rem 0;
     }
-    .menu-carousel dt {
-        font-size: 1rem;
+
+    .gnb {
+        display: none; 
     }
-}
-@media (min-width: 767px) and (max-width: 897px){
-    .inner{
+
+    /* 메인 배너 */
+    .main-banner img {
         width: 100%;
-        margin: 0 auto;
     }
-    .menu-carousel dd {
-        padding: 0.625rem;
-        font-weight: 500;
-        color: #666;
-        /* font-size: 1.25rem; */
-        display: block;
-        border: 1px solid #000;
-        font-size: 0.7rem;
+    .main-banner{
+        width: 100%;
     }
+
+    /* 추천 메뉴 */
+    .recommended-menu h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .menu-carousel {
+        flex-direction: column; /* 세로로 정렬 */
+        gap: 1rem;
+    }
+
+    .menu-carousel .menu-item {
+        width: 100%; /* 모바일에서 100% 너비로 */
+        flex: 1 1 auto;
+    }
+
     .menu-carousel dt {
         font-size: 1rem;
     }
 
+    .menu-carousel dd {
+        font-size: 0.875rem;
+    }
+
+    /* 배달 서비스 */
+    .delivery-services h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .delivery-options {
+        flex-direction: column; /* 세로 정렬 */
+    }
+
+    .delivery-options li {
+        width: 100%;
+    }
+
+    .delivery-options img {
+        width: 80%; /* 모바일에서 이미지 크기 조정 */
+        height: auto;
+    }
+
+    /* 매장 찾기 */
+    .store-locator h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .store-list {
+        grid-template-columns: repeat(2, 1fr); /* 모바일에서 2열로 나열 */
+        gap: 1rem;
+    }
+
+    .store-list li a {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 푸터 */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .foot-logo {
+        padding: 2rem 0;
+    }
+
+    .sns-list {
+        text-align: center;
+    }
+
+    .sns-list img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
+
+@media (min-width: 767px) and (max-width: 897px) {
+    .inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu-carousel dd {
+        padding: 0.625rem;
+        font-weight: 500;
+        color: #666;
+        display: block;
+        border: 1px solid #000;
+        font-size: 0.7rem;
+    }
+
+    .menu-carousel dt {
+        font-size: 1rem;
+    }
+
+    .recommended-menu h3 {
+        font-size: 2rem;
+    }
+
+    .delivery-services .inner h3 {
+        font-size: 1.8rem;
+    }
+
+    .store-list {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem; 
+    }
+
+    .store-list li {
+        display: inline-block; 
+        width: 33%; 
+    }
+
+    .store-list li a {
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100px;
+        border-radius: px;
+    }
+    .market{
+        gap: 2rem;
+    }
+}
+@media (min-width: 898px) and (max-width: 1098px){
+    .store-list {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem; 
+    }
+
+    .store-list li {
+        display: inline-block; 
+        width: 33%; 
+    }
+
+    .store-list li a {
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100px;
+        border-radius: 5px;
+    }
+    .market{
+        gap: 2rem;
+    }
+
+}
+
+
 @media (min-width: 967px) and (max-width: 1099px){
     .menu-carousel dd {
         padding: 0.625rem;
@@ -326,6 +473,32 @@ a {
     }
     .menu-carousel dt {
         font-size: 1rem;
+    }
+
+}
+@media (min-width: 1099px) and (max-width: 1420px){
+    .store-list {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem; 
+    }
+
+    .store-list li {
+        display: inline-block; 
+        width: 33%; 
+    }
+
+    .store-list li a {
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 180px;
+        border-radius: 10px;
+    }
+    .market{
+        gap: 2rem;
     }
 
 }
@@ -356,7 +529,7 @@ a {
     .recommended-menu h3{
         font-size: 2rem;
     }
-
+    
     }
     .menu-carousel dt {
         font-size: 1rem;
@@ -424,5 +597,8 @@ a {
     .menu-carousel dt {
         font-size: 1rem;
         /* border: 1px solid #000; */
+    }
+    .recommended-menu h3{
+        font-size: 2rem;
     }
 }
