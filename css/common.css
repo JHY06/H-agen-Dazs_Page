@@ -399,11 +399,12 @@ a {
         color: #666;
         display: block;
         border: 1px solid #000;
-        font-size: 30%;
+        /* font-size: 30%; */
+        font-size: 0.3rem;
     }
 
     .menu-carousel dt {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .recommended-menu h3 {
@@ -689,7 +690,8 @@ a {
     border: 1px solid #000;
 }
 .menu-carousel dt {
-    font-size: 0.7rem;
+    font-weight: 700;
+    font-size: 0.5rem;
     /* border: 1px solid #000; */
 }
 
