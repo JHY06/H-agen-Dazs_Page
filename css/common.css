@@ -115,7 +115,7 @@ a {
     /* width: 26.1rem; */
     /* min-height: 35rem; */
     width: 34.8%;
-    flex: 1 1 30%;  
+    flex: 1 1 30%;
     border: 1px solid #000;
     aspect-ratio: 1/1.408;
 }
@@ -155,7 +155,7 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-.delivery-services  h3 {
+.delivery-services h3 {
     font-weight: 900;
     font-size: 3.125rem;
     padding: 1.875rem;
@@ -284,37 +284,38 @@ a {
         padding: 0 1rem;
     }
 
-    /* 헤더 */
     .logo {
         text-align: center;
         padding: 1rem 0;
+        justify-content: center;
     }
 
     .gnb {
-        display: none; 
+        display: none;
+        /* background: url(../img/hamebuger_menu.jpg); */
     }
 
     /* 메인 배너 */
     .main-banner img {
         width: 100%;
     }
-    .main-banner{
+    .main-banner {
         width: 100%;
     }
 
     /* 추천 메뉴 */
     .recommended-menu h3 {
         font-size: 1.5rem;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .menu-carousel {
-        flex-direction: column; /* 세로로 정렬 */
+        /* flex-direction: column; 세로로 정렬 */
         gap: 1rem;
     }
 
     .menu-carousel .menu-item {
-        width: 100%; /* 모바일에서 100% 너비로 */
+        width: 100%;
         flex: 1 1 auto;
     }
 
@@ -380,8 +381,125 @@ a {
         width: 2.5rem;
         height: 2.5rem;
     }
+    .store-locator h3 {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 521px) and (max-width: 766px) {
+    .inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .store-locator h3 {
+        font-size: 2.15rem;
+    }
+    .menu-carousel dd {
+        padding: 0.625rem;
+        font-weight: 500;
+        color: #666;
+        display: block;
+        border: 1px solid #000;
+        font-size: 30%;
+    }
+
+    .menu-carousel dt {
+        font-size: 1rem;
+    }
+
+    .recommended-menu h3 {
+        font-size: 1.8rem;
+    }
+
+    .delivery-services .inner h3 {
+        font-size: 1.8rem;
+    }
+
+    .store-locator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .store-locator .inner {
+        display: flex;
+        /* font-size: 1.8rem; */
+        flex-direction: column;
+        /* align-items: center; */
+        /* text-align: center; */
+        padding: 10px;
+    }
+    .store-locator {
+        font-size: 1.8rem;
+    }
+
+    .market {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .market .inner {
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .market .button {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .market .store-list {
+        /* display: grid; */
+        grid-template-columns: repeat(3, 1fr);
+        /* display: flex; */
+        justify-content: center;
+        gap: 1rem;
+        /* width: 100%; */
+    }
+
+    .market .store-list li {
+        /* width: auto; */
+        display: block;
+        /* display: flex; */
+    }
+
+    .market .store-list li a {
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        width: 150px;
+        height: 20px;
+    }
+    /* .store-wrap {
+        flex-direction: column-reverse;
+    } */
 }
 
+@media (min-width: 898px) and (max-width: 1098px) {
+    .store-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .store-list li {
+        display: inline-block;
+        width: 33%;
+    }
+
+    .store-list li a {
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100px;
+        border-radius: 5px;
+    }
+    .market {
+        gap: 2rem;
+    }
+}
 @media (min-width: 767px) and (max-width: 897px) {
     .inner {
         width: 100%;
@@ -410,14 +528,14 @@ a {
     }
 
     .store-list {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 1rem; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .store-list li {
-        display: inline-block; 
-        width: 33%; 
+        display: inline-block;
+        width: 33%;
     }
 
     .store-list li a {
@@ -429,20 +547,20 @@ a {
         width: 100px;
         border-radius: px;
     }
-    .market{
+    .market {
         gap: 2rem;
     }
 }
-@media (min-width: 898px) and (max-width: 1098px){
+@media (min-width: 898px) and (max-width: 1098px) {
     .store-list {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 1rem; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .store-list li {
-        display: inline-block; 
-        width: 33%; 
+        display: inline-block;
+        width: 33%;
     }
 
     .store-list li a {
@@ -454,14 +572,12 @@ a {
         width: 100px;
         border-radius: 5px;
     }
-    .market{
+    .market {
         gap: 2rem;
     }
-
 }
 
-
-@media (min-width: 967px) and (max-width: 1099px){
+@media (min-width: 967px) and (max-width: 1099px) {
     .menu-carousel dd {
         padding: 0.625rem;
         font-weight: 500;
@@ -474,18 +590,17 @@ a {
     .menu-carousel dt {
         font-size: 1rem;
     }
-
 }
-@media (min-width: 1099px) and (max-width: 1420px){
+@media (min-width: 1099px) and (max-width: 1420px) {
     .store-list {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 1rem; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .store-list li {
-        display: inline-block; 
-        width: 33%; 
+        display: inline-block;
+        width: 33%;
     }
 
     .store-list li a {
@@ -497,10 +612,9 @@ a {
         width: 180px;
         border-radius: 10px;
     }
-    .market{
+    .market {
         gap: 2rem;
     }
-
 }
 @media (min-width: 768px) and (max-width: 1100px) {
     .inner {
@@ -526,59 +640,58 @@ a {
         /* font-size: 0.5rem; */
         border: 1px solid #000;
     }
-    .recommended-menu h3{
+    .recommended-menu h3 {
         font-size: 2rem;
     }
-    
-    }
-    .menu-carousel dt {
-        font-size: 1rem;
-    }
+}
+.menu-carousel dt {
+    font-size: 1rem;
+}
 
-    .main-banner img {
-        width: 100%;
-        height: auto;
-    }
+.main-banner img {
+    width: 100%;
+    height: auto;
+}
 
-    .delivery-services .button {
-        width: 70%;
-        height: 4.5rem;
-        font-size: 1.2rem;
-    }
-    .gnb {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .gnb li {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .gnb a {
-        padding: 1rem;
-        font-size: 1.2rem;
-    }
+.delivery-services .button {
+    width: 70%;
+    height: 4.5rem;
+    font-size: 1.2rem;
+}
+.gnb {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.gnb li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.gnb a {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
 
-    .recommended-menu {
-        width: 100%;
-    }
-    .menu-carousel dd {
-        /* padding: 0.625rem; */
-        font-weight: 500;
-        color: #666;
-        /* font-size: 0.8rem; */
-        /* font-size: 1.25rem; */
-        display: block;
-        /* border: 1px solid #000; */
-        /* font-size: 0.5rem; */
-        border: 1px solid #000;
-    }
-    .menu-carousel dt {
-        font-size: 0.7rem;
-        /* border: 1px solid #000; */
-    }
+.recommended-menu {
+    width: 100%;
+}
+.menu-carousel dd {
+    /* padding: 0.625rem; */
+    font-weight: 500;
+    color: #666;
+    /* font-size: 0.8rem; */
+    /* font-size: 1.25rem; */
+    display: block;
+    /* border: 1px solid #000; */
+    /* font-size: 0.5rem; */
+    border: 1px solid #000;
+}
+.menu-carousel dt {
+    font-size: 0.7rem;
+    /* border: 1px solid #000; */
+}
 
 @media (min-width: 1024px) and (max-width: 1900px) {
     .inner {
@@ -598,7 +711,7 @@ a {
         font-size: 1rem;
         /* border: 1px solid #000; */
     }
-    .recommended-menu h3{
+    .recommended-menu h3 {
         font-size: 2rem;
     }
 }
