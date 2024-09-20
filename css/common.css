@@ -277,7 +277,7 @@ a {
     color: #000000;
 }
 
-@media (min-width: 420px) and (max-width: 520px) {
+@media (min-width: 375px) and (max-width: 520px) {
     .inner {
         width: 100%;
         margin: 0 auto;
@@ -290,11 +290,6 @@ a {
         justify-content: center;
     }
 
-    .gnb {
-        display: none;
-        /* background: url(../img/hamebuger_menu.jpg); */
-    }
-
     /* 메인 배너 */
     .main-banner img {
         width: 100%;
@@ -305,7 +300,8 @@ a {
 
     /* 추천 메뉴 */
     .recommended-menu h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        display: flex;
         /* text-align: center; */
     }
 
@@ -384,6 +380,12 @@ a {
     .store-locator h3 {
         font-size: 1.8rem;
     }
+    .recommended-menu .inner {
+        background: #fff;
+    }
+    .menu-carousel {
+        background: #fff;
+    }
 }
 @media (min-width: 521px) and (max-width: 766px) {
     .inner {
@@ -404,7 +406,7 @@ a {
     }
 
     .menu-carousel dt {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     .recommended-menu h3 {
@@ -475,6 +477,100 @@ a {
         flex-direction: column-reverse;
     } */
 }
+@media (min-width: 375px) and (max-width: 582px) {
+    .inner {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .store-locator h3 {
+        font-size: 2rem;
+    }
+    .menu-carousel dd {
+        padding: 0.625rem;
+        font-weight: 500;
+        color: #666;
+        display: block;
+        border: 1px solid #000;
+        /* font-size: 30%; */
+        font-size: 0.21rem;
+    }
+
+    .menu-carousel dt {
+        font-size: 0.3rem;
+    }
+    .menu-carousel {
+        background: #fff;
+    }
+    .recommended-menu .inner {
+        background: #fff;
+    }
+
+    .recommended-menu h3 {
+        font-size: 1.4rem;
+    }
+
+    .delivery-services .inner h3 {
+        font-size: 1.8rem;
+    }
+
+    .store-locator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .store-locator .inner {
+        display: flex;
+        /* font-size: 1.8rem; */
+        flex-direction: column;
+        /* align-items: center; */
+        /* text-align: center; */
+        padding: 10px;
+    }
+    .store-locator {
+        font-size: 1.8rem;
+    }
+
+    .market {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .market .inner {
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .market .button {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .market .store-list {
+        /* display: grid; */
+        grid-template-columns: repeat(3, 1fr);
+        /* display: flex; */
+        justify-content: center;
+        gap: 1rem;
+        /* width: 100%; */
+    }
+
+    .market .store-list li {
+        /* width: auto; */
+        display: block;
+        /* display: flex; */
+    }
+
+    .market .store-list li a {
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        width: 150px;
+        height: 20px;
+    }
+}
 
 @media (min-width: 898px) and (max-width: 1098px) {
     .store-list {
@@ -513,10 +609,7 @@ a {
         color: #666;
         display: block;
         border: 1px solid #000;
-        font-size: 0.7rem;
-    }
-
-    .menu-carousel dt {
+        font-size: 0.5rem;
         font-size: 1rem;
     }
 
@@ -546,7 +639,7 @@ a {
         font-size: 0.9rem;
         text-align: center;
         width: 100px;
-        border-radius: px;
+        border-radius: 50px;
     }
     .market {
         gap: 2rem;
@@ -634,7 +727,7 @@ a {
         /* padding: 0.625rem; */
         font-weight: 500;
         color: #666;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         /* font-size: 1.25rem; */
         display: block;
         /* border: 1px solid #000; */
@@ -644,9 +737,6 @@ a {
     .recommended-menu h3 {
         font-size: 2rem;
     }
-}
-.menu-carousel dt {
-    font-size: 1rem;
 }
 
 .main-banner img {
@@ -691,7 +781,7 @@ a {
 }
 .menu-carousel dt {
     font-weight: 700;
-    font-size: 0.5rem;
+    /* font-size: 0.5rem; */
     /* border: 1px solid #000; */
 }
 

@@ -49,7 +49,9 @@ h2 {
     gap: 1.25rem;
     margin-top: 2.5rem;
 }
-
+/* .recommended-menu {
+    padding: 8.9375rem 7.375rem;
+} */
 .product-item {
     position: relative;
     overflow: hidden;
