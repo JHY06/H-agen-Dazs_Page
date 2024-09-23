@@ -277,116 +277,162 @@ a {
     color: #000000;
 }
 
-@media (min-width: 375px) and (max-width: 520px) {
+@media (max-width: 520px) {
+    /* inner 클래스가 콘텐츠를 잘 감싸도록 설정 */
     .inner {
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* 넘치는 요소가 줄바꿈되도록 설정 */
+        justify-content: center; /* 콘텐츠를 중앙으로 정렬 */
+    }
+
+    /* 로고 및 제목 텍스트 중앙 정렬 및 크기 조정 */
+    .nav {
         margin: 0 auto;
-        padding: 0 1rem;
     }
-
-    .logo {
-        text-align: center;
-        padding: 1rem 0;
-        justify-content: center;
+    .logo img {
+        width: 86px;
+        height: 46px;
     }
-
-    /* 메인 배너 */
+    .recommended-menu .inner {
+        width: 100%;
+    }
+    .store-locator h3,
+    .recommended-menu h3,
+    .delivery-services h3 {
+        font-size: 1.3rem; /* 글자 크기 조정 */
+        width: 100%; /* 전체 너비 차지 */
+        padding: 10px;
+    }
+    /* 메인 배너 이미지 크기 조정 */
     .main-banner img {
         width: 100%;
     }
-    .main-banner {
+    .inner {
         width: 100%;
+        height: 100%;
     }
 
-    /* 추천 메뉴 */
-    .recommended-menu h3 {
-        font-size: 1.2rem;
-        display: flex;
-        /* text-align: center; */
-    }
-
+    /* 추천 메뉴 섹션 스타일 조정 */
     .menu-carousel {
-        /* flex-direction: column; 세로로 정렬 */
-        gap: 1rem;
+        gap: 1rem; /* 메뉴 항목 간 간격 설정 */
+    }
+    .recommended-menu {
+        padding: 3rem 7.375rem;
     }
 
+    .menu-carousel figure img {
+        width: 189px;
+        height: 189px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .menu-carousel .menu-item figure img {
+        width: 129px;
+        height: 129px;
+        object-fit: cover;
+    }
     .menu-carousel .menu-item {
-        width: 100%;
+        width: 45%;
         flex: 1 1 auto;
+        text-align: center;
     }
 
     .menu-carousel dt {
-        font-size: 1rem;
+        font-size: 1rem; /* 메뉴 제목 글자 크기 */
     }
 
-    .menu-carousel dd {
-        font-size: 0.875rem;
-    }
-
-    /* 배달 서비스 */
-    .delivery-services h3 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
+    /* 배달 서비스 섹션 스타일 조정 */
     .delivery-options {
-        flex-direction: column; /* 세로 정렬 */
+        display: flex; /* Flexbox 활성화 */
+        flex-wrap: wrap; /* 요소들이 줄 바꿈 가능하도록 설정 */
+        justify-content: space-between; /* 요소들 간의 간격 조정 */
+        width: 100%;
     }
 
     .delivery-options li {
-        width: 100%;
+        width: calc(50% - 10px);
+        margin-bottom: 100px;
     }
 
     .delivery-options img {
-        width: 80%; /* 모바일에서 이미지 크기 조정 */
+        width: 100%; /* 이미지 크기를 리스트 아이템 너비에 맞춤 */
         height: auto;
     }
-
-    /* 매장 찾기 */
-    .store-locator h3 {
-        font-size: 1.5rem;
-        text-align: center;
+    .delivery-options .inner {
+        width: 10%;
+    }
+    .button {
+        width: 100%;
+        height: 100%;
     }
 
+    /* 매장 찾기 섹션 스타일 조정 */
     .store-list {
-        grid-template-columns: repeat(2, 1fr); /* 모바일에서 2열로 나열 */
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr); /* 2열로 정렬 */
+        gap: 1rem; /* 요소 간 간격 설정 */
+    }
+    .store-locator .inner {
+        width: 100%;
+        height: 100%;
     }
 
     .store-list li a {
-        font-size: 1rem;
-        text-align: center;
-        width: 100%;
+        font-size: 1rem; /* 글자 크기 */
+        width: 100%; /* 전체 너비 차지 */
         height: auto;
     }
 
-    /* 푸터 */
-    .footer {
-        padding: 2rem 1rem;
-    }
-
+    /* 푸터 스타일 조정 */
+    .footer,
+    .sns-list,
     .foot-logo {
-        padding: 2rem 0;
-    }
-
-    .sns-list {
-        text-align: center;
+        padding: 2rem 1rem; /* 패딩 조정 */
+        text-align: center; /* 텍스트 중앙 정렬 */
     }
 
     .sns-list img {
-        width: 2.5rem;
+        width: 2.5rem; /* SNS 아이콘 크기 */
         height: 2.5rem;
     }
-    .store-locator h3 {
-        font-size: 1.8rem;
+    .market {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .recommended-menu .inner {
-        background: #fff;
+
+    .market .inner {
+        display: flex;
     }
-    .menu-carousel {
-        background: #fff;
+
+    .market .button {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .market .store-list {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .market .store-list li {
+        display: block;
+    }
+
+    .market .store-list li a {
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        width: 150px;
+        height: 20px;
+    }
+
+    .menu-carousel dd {
+        display: none;
     }
 }
+
 @media (min-width: 521px) and (max-width: 766px) {
     .inner {
         width: 100%;
@@ -477,9 +523,9 @@ a {
         flex-direction: column-reverse;
     } */
 }
-@media (min-width: 375px) and (max-width: 582px) {
+@media (min-width: 425) and (max-width: 582px) {
     .inner {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
     }
@@ -507,7 +553,7 @@ a {
     }
 
     .recommended-menu h3 {
-        font-size: 1.4rem;
+        font-size: 0.2rem;
     }
 
     .delivery-services .inner h3 {
@@ -528,8 +574,9 @@ a {
         /* text-align: center; */
         padding: 10px;
     }
-    .store-locator {
-        font-size: 1.8rem;
+    .store-list {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .market {
@@ -558,9 +605,9 @@ a {
     }
 
     .market .store-list li {
-        /* width: auto; */
         display: block;
-        /* display: flex; */
+        box-sizing: border-box;
+        width: 10%;
     }
 
     .market .store-list li a {
@@ -643,6 +690,12 @@ a {
     }
     .market {
         gap: 2rem;
+    }
+    .menu-carousel dt {
+        font-size: 0.8rem;
+    }
+    .menu-carousel dd {
+        font-size: 0.5rem;
     }
 }
 @media (min-width: 898px) and (max-width: 1098px) {
@@ -761,7 +814,7 @@ a {
     align-items: center;
 }
 .gnb a {
-    padding: 1rem;
+    /* padding: 1rem; */
     font-size: 1.2rem;
 }
 
@@ -774,7 +827,7 @@ a {
     color: #666;
     /* font-size: 0.8rem; */
     /* font-size: 1.25rem; */
-    display: block;
+    /* display: block; */
     /* border: 1px solid #000; */
     /* font-size: 0.5rem; */
     border: 1px solid #000;
