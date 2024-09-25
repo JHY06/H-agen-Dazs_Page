@@ -101,6 +101,7 @@ a {
 .foot-logo {
     text-align: center;
     padding: 4.5rem 0 2.25rem;
+    width: 100%;
 }
 .menu-carousel {
     display: flex;
@@ -251,6 +252,8 @@ a {
 }
 .sns-list {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .sns-list li {
     padding: 0.6875rem;
@@ -299,7 +302,7 @@ a {
     .store-locator h3,
     .recommended-menu h3,
     .delivery-services h3 {
-        font-size: 1.3rem; /* 글자 크기 조정 */
+        font-size: 1rem; /* 글자 크기 조정 */
         width: 100%; /* 전체 너비 차지 */
         padding: 10px;
     }
@@ -327,8 +330,8 @@ a {
         margin: 0 auto;
     }
     .menu-carousel .menu-item figure img {
-        width: 129px;
-        height: 129px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
     }
     .menu-carousel .menu-item {
@@ -338,14 +341,15 @@ a {
     }
 
     .menu-carousel dt {
-        font-size: 1rem; /* 메뉴 제목 글자 크기 */
+        font-size: 0.7rem; /* 메뉴 제목 글자 크기 */
     }
 
     /* 배달 서비스 섹션 스타일 조정 */
     .delivery-options {
         display: flex; /* Flexbox 활성화 */
         flex-wrap: wrap; /* 요소들이 줄 바꿈 가능하도록 설정 */
-        justify-content: space-between; /* 요소들 간의 간격 조정 */
+        /* justify-content: space-between; 요소들 간의 간격 조정 */
+        gap: 1rem;
         width: 100%;
     }
 
@@ -387,8 +391,9 @@ a {
     .footer,
     .sns-list,
     .foot-logo {
-        padding: 2rem 1rem; /* 패딩 조정 */
-        text-align: center; /* 텍스트 중앙 정렬 */
+        padding: 2rem 1rem;
+        /* text-align: center; 
+        align-content: center; */
     }
 
     .sns-list img {
@@ -399,6 +404,7 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 2.125rem;
     }
 
     .market .inner {
@@ -408,6 +414,13 @@ a {
     .market .button {
         order: -1;
         margin-bottom: 1rem;
+    }
+    .market img {
+        width: 300px;
+    }
+    .store-locator figure {
+        text-align: center;
+        padding: 2rem;
     }
 
     .market .store-list {
@@ -431,6 +444,25 @@ a {
 
     .menu-carousel dd {
         display: none;
+    }
+    .foot-text p {
+        font-size: 0.53rem;
+    }
+    .foot-logo img {
+        width: 86px;
+        height: 46px;
+    }
+    .sns-list img {
+        width: 30px;
+        height: 30px;
+    }
+    .foot-logo figure {
+        width: 86px;
+        height: 30px;
+    }
+    .foot-logo {
+        text-align: center;
+        padding: 1.8rem 0 1.25rem;
     }
 }
 
