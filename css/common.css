@@ -894,3 +894,49 @@ a {
         font-size: 2rem;
     }
 }
+ul.gnb .submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+ul.gnb li:hover .submenu {
+    display: block; /* Show submenu on hover */
+}
+
+ul.gnb .submenu li {
+    padding: 5px 100px;
+}
+.submenu {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    gap: 164px;
+    display: none;
+    padding-top: 30px;
+}
+.submenu li a {
+    display: block;
+    border: 1px solid #ff0;
+    padding: 10px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+.gnb {
+    width: auto;
+    transition: width 0.5s ease;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gnb.expanded {
+    width: 100%;
+}
